@@ -32,15 +32,15 @@ TEST_CASE("Tests for move [TASK C]") {
   move(&pointP,&vel_1,2.0);
   move(&pointQ,&vel_2,3.1);
   move(&pointR,&vel_1,10.0);
-  
+  //Testing X-Coordinate
   CHECK(pointP.x == 12.0);
   CHECK(pointQ.x == -4.5);
   CHECK(pointR.x == 134.0);
-
+  //Testing Y-Coordinate
   CHECK(pointP.y == 10.0);
   CHECK(pointQ.y == 11.7);
   CHECK(pointR.y == 114.0);
-
+  //Testing Z-Coordinate
   CHECK(pointP.z == 30.4);
   CHECK(pointQ.z == -18.9);
   CHECK(pointR.z == -40);
