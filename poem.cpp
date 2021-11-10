@@ -8,18 +8,19 @@ string * createAPoemDynamically() {
 }
 
 int main() {
-    int i = 0;
+    int flag = 0;
 
     while(true) {
         string *p;
         p = createAPoemDynamically();
+        std::cout << "Poem has been \x1B[32mcreated\033[0m" << '\n';
 
         delete p;
-        i++;
-        if (i == 3) { //so that memory isn't constantly used
+        std::cout << "Allocated memory has been \x1B[31mdeleted\033[0m" << '\n';
+        flag++;
+        if (flag == 20) { //so that memory isn't constantly used
             break; //don't need to use ctrl+c to stop code
         }
-
     }
 
     return 0;
