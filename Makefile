@@ -16,4 +16,4 @@ tests.o: tests.cpp doctest.h funcs.h coord3d.h
 	g++ -c -std=c++11 tests.cpp
 
 clean:
-	rm -f *o a.out main
+	rm -f *o a.out main tests
