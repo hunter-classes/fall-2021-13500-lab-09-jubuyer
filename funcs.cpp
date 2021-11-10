@@ -17,7 +17,7 @@ double length(Coord3D *p) {
 
 	double distance = sqrt((x_val*x_val) + (y_val*y_val) + (z_val*z_val));
 
-	return distance;
+	return round(distance * 10000.000) / 10000.000; //explained by ellen
 }
 
 /*
@@ -40,7 +40,7 @@ Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2) {
 
 
 /*
-@param *ppos - Coord3D pointer of an objects position 
+@param *ppos - Coord3D pointer of an objects position
 @param *pvel - Coord3D pointer of an objects velocity
 @param dt - elasped time
 
@@ -81,8 +81,7 @@ void deleteCoord3D(Coord3D *p) {
 }
 
 
-// int main(int argc, char const *argv[])
-// {
+// int main(int argc, char const *argv[]) {
 // 	// Coord3D pointP = {10, 20, 30};
 //  	// Coord3D pointQ = {-20, 21, -22};
 //  	// std::cout << "tests for length\n";
@@ -94,8 +93,8 @@ void deleteCoord3D(Coord3D *p) {
 //  	// std::cout << "Address of Q: " << &pointQ << std::endl << std::endl;
 
 //  	// Coord3D * ans = fartherFromOrigin(&pointP, &pointQ);
-   
-//  	// std::cout << "ans = " << ans << std::endl; 
+
+//  	// std::cout << "ans = " << ans << std::endl;
 
 //  	// std::cout << "tests for move\n";
 // 	// Coord3D pos = {0, 0, 100.0};
@@ -106,22 +105,22 @@ void deleteCoord3D(Coord3D *p) {
 //  	// // prints: 2 -10 100.4
 
 //  	double x = 10;
-//  	double y = 20; 
+//  	double y = 20;
 //  	double z = 30;
 //     std::cout << "Enter position: ";
 //     std::cout << x << y << z << '\n';
 //     Coord3D *ppos = createCoord3D(x,y,z);
-    
+
 //     std::cout << "Enter velocity: ";
-//     x = 5.5; 
-//     y = -1.4; 
+//     x = 5.5;
+//     y = -1.4;
 //     z = 7.77;
 //     std::cout << x << y << z << '\n';
 //     Coord3D *pvel = createCoord3D(x,y,z);
 
 //     move(ppos, pvel, 10.0);
 
-//     std::cout << "Coordinates after 10 seconds: " 
+//     std::cout << "Coordinates after 10 seconds: "
 //          << (*ppos).x << " " << (*ppos).y << " " << (*ppos).z << std::endl;
 
 //     deleteCoord3D(ppos); // release memory
