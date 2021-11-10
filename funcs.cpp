@@ -28,7 +28,7 @@ double length(Coord3D *p) {
 the origin
 */
 Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2) {
-	Coord3D * ans;
+	Coord3D * ans = p1;
 	if (length(p1) > length(p2)) {
 		ans = p1;
 	} else {
