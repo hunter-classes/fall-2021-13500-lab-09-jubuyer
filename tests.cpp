@@ -47,5 +47,10 @@ TEST_CASE("Tests for move [TASK C]") {
 }
 
 TEST_CASE("Tests for createCoord3D/deleteCoord3D [TASK E]") {
-
+  Coord3D *test0 = createCoord3D(1,2,3);
+  Coord3D *test1 = createCoord3D(12, -12, 124);
+  Coord3D *test2 = createCoord3D(31, 82, -16);
+  CHECK(sizeof(*test0) != (NULL));
+  CHECK(sizeof(*test1) != (NULL));
+  CHECK(sizeof(*test2) != (NULL));
 }
